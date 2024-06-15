@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Welcome to XYZ Technologies</h2>
+<h2>Welcome to XYZ Technologies Powered By Edureka DevOps</h2>
   <h3>This is admin Module</h3>
   <button name="Add User" value="Add User" type="button" onclick="addUser()">Add User</button>  
 <script>  
