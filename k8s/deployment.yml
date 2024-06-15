@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xyz-deployment
+  labels:
+    app: xyz-tech-app
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: xyz-tech-app
+
+  template:
+    metadata:
+      labels:
+        app: xyz-tech-app
+    spec:
+      containers:
+      - name: xyz-tech-app
+        image: simoganger/xyz-technologies:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
